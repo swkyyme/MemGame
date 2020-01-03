@@ -188,7 +188,9 @@ function handleCardFlip() {
           game.preSelected.classList.remove('card--flipped');
           this.classList.remove('card--flipped');
           game.preSelected = null;
-          bindCardClick();
+          if (game.startButton.innerHTML === `End Game`) {
+            bindCardClick();
+          }
         },1000);
 
       }
